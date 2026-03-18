@@ -1302,3 +1302,42 @@ h1, h2, h3, h4, h5, h6 {
 .product-card:hover, .feature-card:hover, .testimonial-card:hover, .marv-card:hover {
     opacity: 0.85 !important;
 }
+
+/* =========================================
+   RESPONSIVE DESIGN (MOBILE)
+========================================= */
+@media (max-width: 768px) {
+    .section-padding { padding: 40px 0 !important; }
+    .section-header h2 { font-size: 2rem; }
+    
+    /* Navbar */
+    .nav-container { flex-direction: column; gap: 15px; }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .nav-contact { display: none; }
+    
+    /* Hero */
+    .hero { min-height: 400px; height: 60vh; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .slider-arrows { display: none; }
+    
+    /* About */
+    .about-container { flex-direction: column; }
+    .about-features { grid-template-columns: 1fr; }
+    
+    /* Grids */
+    .products-grid, .features-grid, .gallery-grid, .testimonials-grid, .contact-grid, .footer-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Gallery */
+    .gallery-item.span-2 { grid-column: span 1; }
+    
+    /* Stats */
+    .stats-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .counter-wrap { font-size: 2.5rem; }
+    
+    /* Marvelous */
+    .marv-card { flex: 0 0 100%; min-width: 100%; }
+    .marv-nav { display: none; } /* Prefer swipe on mobile */
+    .marvelous-carousel-wrapper { padding: 0 10px; }
+}
